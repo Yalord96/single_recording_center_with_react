@@ -1,5 +1,8 @@
 import React from "react";
 import "./Header.scss";
+import Logo from "./logo.png";
+import ArrowDown from "./arrow-down.png";
+import Phone from "./phone-square.png";
 // export default function Header() {
 //     return <header aria-label="шапка сайта" className="header-content">
 //         <div className="header">
@@ -57,11 +60,11 @@ export default class Header extends React.Component{
                      <div className="header">
                          <div className="header__brand" aria-label="логотип сайта">
                              <figure className="brand">
-                                 <img className="brand__img" src="" alt="логотип Единый центр записи"/>
+                                 <img className="brand__img" src={Logo} alt="логотип Единый центр записи"/>
                                  <figcaption className="brand__name">Единый <br/> центр записи</figcaption>
                              </figure>
-                             <a className="brand__phone" aria-label="номер телефона" href="tel: 803005000"><i
-                                 className="fas fa-phone-square-alt"></i><span className="brand__phone_number">80300 5000</span></a>
+                             <a className="brand__phone" aria-label="номер телефона" href="tel: 803005000"><img className="brand__phone_logo"
+                                 src={Phone} /><span className="brand__phone_number">80300 5000</span></a>
                          </div>
                          <div className="menu" role="navigation" aria-label="меню навигации">
                              <nav>
@@ -70,7 +73,7 @@ export default class Header extends React.Component{
                                          className="menu__items_links menu__items_main"
                                          href="">Главная</a></li>
                                      <li role="listitem" className="menu__items_listitem menu__items_services"><a
-                                         className="menu__items_links" href="">Услуги <img src=""
+                                         className="menu__items_links" href="">Услуги <img src={ArrowDown}
                                                                                            alt="стрелка вниз"/></a>
                                          <ul className="services__items">
                                              <li role="listitem"><a href="">МРТ</a></li>

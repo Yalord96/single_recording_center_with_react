@@ -1,0 +1,168 @@
+@import "../../_helpers/variables";
+@import "../../../node_modules/normalize.css/normalize.css";
+
+$even: 4px;
+$odd: 2px;
+@for $i from 1 through 6 {
+  .border-#{$i} {
+    @if ($i % 2 == 0) {
+      border: $even solid rgba(random(255), random(255), random(255), $alpha: 1.0)
+    } @else {
+      border: $odd solid rgba(random(255), random(255), random(255), $alpha: 1.0)
+    }
+  }
+}
+
+@for $i from 1 through 18 {
+  #tabs-#{$i}{
+    display: flex ;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px 0 0 0;
+    margin: 0 auto 15px auto;
+    border: 1px solid #e3e6ea;
+    border-top: none;
+  }
+}
+
+.main__nav{
+  margin-top: 35px;
+  padding: 0;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-bottom: 1px solid #e3e6ea;
+
+  &_li{
+    display: inline-flex;
+    :focus {
+      margin: -1px;
+      border: 1px solid #e3e6ea;
+      border-bottom:1px solid #fff;
+      color:#494848;
+    }
+  }
+  &_link{
+    padding: 15px;
+    color:#43b1d2;
+    font-size: 24px;
+    line-height: 14px;
+    font-family: "Calibri";
+    font-weight: bold;
+    text-align: center;
+  }
+}
+.clinic-tab{
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.clinic {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  //max-width: 1440px;
+  //margin: 0 auto;
+  &__card {
+    max-width: 550px;
+    //margin: 0 auto;
+    //border: 3px solid;
+    //border-color: #43b1d2;
+    padding: 20px;
+    margin: 20px;
+
+    &_head {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      @media (max-width: 627px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+      }
+    }
+
+    &_logo {
+      width: 200px;
+      margin: 0 auto;
+    }
+
+    &_title {
+      font-family: "Myriad Pro";
+      font-size: 36px;
+      font-weight: bold;
+      line-height: 1;
+      display: flex;
+      flex-direction: column;
+      text-align: end;
+      @media (max-width: 627px) {
+        font-size: 26px;
+        text-align: center;
+      }
+    }
+
+    &_name {
+      margin: 10px 0px 35px 0px;
+
+    }
+
+    &_adrress {
+      font-family: "Tahoma";
+      font-size: 14px;
+      color: #43b1d2;
+      font-style: italic;
+    }
+
+    &_info {
+      font-family: "Calibri";
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    &_footer {
+      display: flex;
+      justify-content: space-between;
+      //flex-wrap: wrap;
+      @media (max-width: 462px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    &_number {
+      font-family: "Myriad Pro";
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    &_button {
+      font-family: "Myriad Pro";
+      font-size: 18px;
+      background-color: #37c3a8;
+      border: solid;
+      border-radius: 5px;
+      border-color: #37c3a8;
+      color: white;
+      padding: 5px 10px;
+      @media (max-width: 462px) {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.clinic-tab__all-clinic {
+  font-family: "Myriad Pro";
+  font-size: 18px;
+  background-color: #cad3e5;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  padding: 15px 25px;
+  margin: 40px auto;
+  display: flex;
+  align-items: center;
+}
