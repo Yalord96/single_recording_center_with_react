@@ -3,8 +3,8 @@ import "./Footer.scss"
 import Logo from "../Header/logo.png";
 import Envelope from "./Img/envelope.png";
 import Metka from "./Img/icon_metka.png";
-import Phone from "./Img/icon_phone.png";
-
+import PhoneF from "./Img/icon_phone.png";
+import Phone from "../Phone/Phone";
 
 export default class Footer extends React.Component{
 //     let test = document.querySelectorAll(".clinic__card_button");
@@ -53,7 +53,7 @@ export default class Footer extends React.Component{
 
                             </li>
                             <li class="list__item">
-                                <img class="list__item_phone" src={Phone} alt="phone"/>
+                                <img class="list__item_phone" src={PhoneF} alt="phone"/>
                                 <div class="list__item-text">
                                     <a class="list__item-text_link" href="tel: +1234567890">
                                         <p>+123 456 7890</p>
@@ -86,6 +86,9 @@ export default class Footer extends React.Component{
                                         <li><a href="#" class="socials socials_ln"></a></li>
                                     </ul>
                                 </div>
+                            </li>
+                            <li>
+                                <Phone number={800300500} second={5}/>
                             </li>
                         </ul>
                     </div>
